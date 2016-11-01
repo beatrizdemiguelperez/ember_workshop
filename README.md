@@ -38,7 +38,7 @@ Start! fork this project or just download it
 
 > **Steps:**
 
-> - `ember g route restaurants`
+> - `ember g route index && ember g route restaurants`
 > - Change the Restaurant Route to use  resources/restaurants.json as the Model
 > - Show restaurants list in the restaurants.hbs Template
 > - Redirect index to restaurants route
