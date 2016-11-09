@@ -1,8 +1,18 @@
-<ul>
-	{{#each model as |restaurant| }}
-		<li>
-			<h1>{{restaurant.name}}</h1>
-			<p>{{restaurant.description}}</p>
-		</li>
-	{{/each}}
-</ul>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">{{t 'restaurants'}}</h3>
+	</div>
+
+	<div class="list-group">
+	    {{#each model as |restaurant| }}
+		 <div class="list-group-item">
+			 <h4 class="list-group-item-heading">
+				 {{restaurant.name}}
+			 </h4>
+			 <p class="list-group-item-text">
+				 {{restaurant.description}}
+			 </p>
+		 </div>
+		{{/each}}
+	</div>
+</div>

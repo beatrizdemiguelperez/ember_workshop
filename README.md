@@ -44,3 +44,12 @@ Start! fork this project or just download it
 > - Show restaurants list in the restaurants.hbs Template
 > - Personalize the page design using resources/css
 > - Go http://localhost:4000/ and see it!
+
+3. Add translations
+
+
+> **Steps:**
+
+> - `ember install ember-i18n`
+> - Add translations with `ember generate locale en`
+> - Add change language dropdown with: `ember-cli-sass && ember install ember-power-select`
