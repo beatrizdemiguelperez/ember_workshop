@@ -8,5 +8,6 @@ export default {
    		"other": "¡{{count}} restaurantes encontrados!"
 	},
 	"filterRestaurants": "Filtra restaurantes",
-	"filter": "filtrar"
+	"filter": "Filtrar",
+	"cuisine": "Cocina"
 };

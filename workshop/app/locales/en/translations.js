@@ -8,5 +8,6 @@ export default {
    		"other": "{{count}} restaurants found!"
 	},
 	"filterRestaurants": "Filter restaurants",
-	"filter": "filter"
+	"filter": "Filter",
+	"cuisine": "Cuisine"
 };
