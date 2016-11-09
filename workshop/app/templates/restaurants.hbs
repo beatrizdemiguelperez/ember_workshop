@@ -1,18 +1,19 @@
 <div class="panel panel-default">
 	<div class="panel-heading">
-		<h3 class="panel-title">{{t 'restaurants'}}</h3>
+		<h3 class="panel-title">{{t 'foundRestaurants' count=model.length}}</h3>
 	</div>
 
 	<div class="list-group">
 	    {{#each model as |restaurant| }}
-		 <div class="list-group-item">
-			 <h4 class="list-group-item-heading">
-				 {{restaurant.name}}
-			 </h4>
-			 <p class="list-group-item-text">
-				 {{restaurant.description}}
-			 </p>
-		 </div>
+			<div class="media">
+				<a class="media-left" href="#">
+					<img class="media-object" src={{restaurant-img restaurant.id}}>
+				</a>
+				<div class="media-body">
+					<h4 class="media-heading">{{restaurant.name}}</h4>
+					{{restaurant.description}}
+				</div>
+			</div>
 		{{/each}}
 	</div>
 </div>

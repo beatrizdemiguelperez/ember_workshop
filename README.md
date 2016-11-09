@@ -53,3 +53,6 @@ Start! fork this project or just download it
 > - `ember install ember-i18n`
 > - Add translations with `ember generate locale en`
 > - Add change language dropdown with: `ember-cli-sass && ember install ember-power-select`
+
+helper
+ember g helper restaurant-img
