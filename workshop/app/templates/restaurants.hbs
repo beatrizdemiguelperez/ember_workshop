@@ -1,19 +1,45 @@
-<div class="panel panel-default">
-	<div class="panel-heading">
-		<h3 class="panel-title">{{t 'foundRestaurants' count=model.length}}</h3>
-	</div>
-
-	<div class="list-group">
-	    {{#each model as |restaurant| }}
-			<div class="media">
-				<a class="media-left" href="#">
-					<img class="media-object" src={{restaurant-img restaurant.id}}>
-				</a>
-				<div class="media-body">
-					<h4 class="media-heading">{{restaurant.name}}</h4>
-					{{restaurant.description}}
-				</div>
+<div class="row-fluid">
+	<div class="col-md-4">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">{{t 'filterRestaurants'}}</h3>
 			</div>
-		{{/each}}
+				<div class="panel-body">
+				   <label>Cuisine</label>
+				   {{#power-select-multiple
+					  options=CUISINE_OPTIONS
+					  selected=selectedCuisins
+					  placeholder="Select some names..."
+					  onchange=(action (mut selectedCuisins))
+					  as |cuisine|
+					}}
+					  {{cuisine.title}}
+					{{/power-select-multiple}}
+				 </div>
+			 <div class="panel-footer">
+				 <button {{action 'filter'}} class="btn btn-default">{{t 'filter'}}</button>
+			 </div>
+		</div>
+	</div>
+	<div class="col-md-8">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">{{t 'foundRestaurants' count=filteredRestaurants.length}}</h3>
+			</div>
+
+			<div class="panel-body">
+			    {{#each filteredRestaurants as |restaurant| }}
+					<div class="media">
+						<a class="media-left" href="#">
+							<img class="media-object" src={{restaurant-img restaurant.id}}>
+						</a>
+						<div class="media-body">
+							<h4 class="media-heading">{{restaurant.name}}</h4>
+							{{restaurant.description}}
+						</div>
+					</div>
+				{{/each}}
+			</div>
+		</div>
 	</div>
 </div>
