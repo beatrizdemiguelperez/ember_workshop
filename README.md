@@ -54,5 +54,10 @@ Start! fork this project or just download it
 > - Add translations with `ember generate locale en`
 > - Add change language dropdown with: `ember-cli-sass && ember install ember-power-select`
 
-helper
-ember g helper restaurant-img
+3. Add new helper
+
+
+> **Steps:**
+
+> - `ember g helper restaurant-img`
+> - copy images from resources and add restaurant img

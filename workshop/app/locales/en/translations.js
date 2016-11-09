@@ -2,5 +2,9 @@ export default {
 	"about": "About",
 	"language": "Language",
 	"restaurants": "Restaurants",
-	"foundRestaurants": "{{count}} restaurants found!"
+	"foundRestaurants": {
+		"zero": "No restaurants found!",
+		"one": "{{count}} restaurant found!",
+   		"other": "{{count}} restaurants found!"
+	}
 };
